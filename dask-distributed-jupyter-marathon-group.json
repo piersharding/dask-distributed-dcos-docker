@@ -9,7 +9,7 @@
       "cmd": "/usr/local/bin/start-dask-scheduler.sh",
       "fetch": [
         {
-          "uri": "https://s3.amazonaws.com/vishnu-mohan/dask-distributed/config.yaml",
+          "uri": "https://raw.githubusercontent.com/piersharding/dask-distributed-dcos-docker/master/config.yaml",
           "extract": false,
           "executable": false,
           "cache": false
@@ -29,7 +29,7 @@
       "container": {
         "type": "MESOS",
         "docker": {
-          "image": "vishnumohan/dask-distributed-dcos",
+          "image": "shared_services-controller-0:5000/arl_img_dcos:latest",
           "forcePullImage": true
         }
       },
@@ -84,7 +84,7 @@
       "cmd": "/usr/local/bin/start-dask-worker.sh",
       "fetch": [
         {
-          "uri": "https://s3.amazonaws.com/vishnu-mohan/dask-distributed/config.yaml",
+          "uri": "https://raw.githubusercontent.com/piersharding/dask-distributed-dcos-docker/master/config.yaml",
           "extract": false,
           "executable": false,
           "cache": false
@@ -98,7 +98,7 @@
       "container": {
         "type": "MESOS",
         "docker": {
-          "image": "vishnumohan/dask-distributed-dcos",
+          "image": "shared_services-controller-0:5000/arl_img_dcos:latest",
           "forcePullImage": true
         }
       },
@@ -153,7 +153,7 @@
       "container": {
         "type": "MESOS",
         "docker": {
-          "image": "vishnumohan/dask-distributed-dcos",
+          "image": "shared_services-controller-0:5000/arl_img_dcos:latest",
           "forcePullImage": true
         }
       },
