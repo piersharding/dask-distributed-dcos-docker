@@ -24,15 +24,16 @@ then
     dask-scheduler \
         --host "${HOST}" \
         --port "${PORT_SCHEDULER}" \
-        --tls-ca-file "${MESOS_SANDBOX}/.ssl/ca-bundle.crt" \
-        --tls-cert "${MESOS_SANDBOX}/.ssl/scheduler.crt" \
-        --tls-key "${MESOS_SANDBOX}/.ssl/scheduler.key" \
         --bokeh-port "${PORT_BOKEH}" \
         --bokeh-whitelist "${BOKEH_WHITELIST}" \
         --bokeh-prefix "${BOKEH_APP_PREFIX}" \
         --use-xheaders "True" \
         --scheduler-file "dask-scheduler-connection" \
         --local-directory "${MESOS_SANDBOX}"
+        # --tls-ca-file "${MESOS_SANDBOX}/.ssl/ca-bundle.crt" \
+        # --tls-cert "${MESOS_SANDBOX}/.ssl/scheduler.crt" \
+        # --tls-key "${MESOS_SANDBOX}/.ssl/scheduler.key" \
+        #
 else
     dask-scheduler "$@"
 fi
