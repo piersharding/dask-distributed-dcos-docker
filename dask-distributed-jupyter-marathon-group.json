@@ -17,7 +17,7 @@
       ],
       "env": {
         "DASK_CONFIG": "/mnt/mesos/sandbox/config.yaml",
-        "HOME": "/home/conda",
+        "HOME": "/root",
         "TERM": "xterm-256color"
       },
       "labels": {
@@ -27,7 +27,7 @@
         "HAPROXY_0_VHOST": "vhost.example.com"
       },
       "container": {
-        "type": "MESOS",
+        "type": "DOCKER",
         "docker": {
           "image": "10.60.253.37:5000/arl_img_dcos:latest",
           "forcePullImage": true
@@ -92,11 +92,11 @@
       ],
       "env": {
         "DASK_CONFIG": "/mnt/mesos/sandbox/config.yaml",
-        "HOME": "/home/conda",
+        "HOME": "/root",
         "TERM": "xterm-256color"
       },
       "container": {
-        "type": "MESOS",
+        "type": "DOCKER",
         "docker": {
           "image": "10.60.253.37:5000/arl_img_dcos:latest",
           "forcePullImage": true
@@ -151,7 +151,7 @@
       "mem": 2048,
       "cmd": "/usr/local/bin/notebook.sh",
       "container": {
-        "type": "MESOS",
+        "type": "DOCKER",
         "docker": {
           "image": "10.60.253.37:5000/arl_img_dcos:latest",
           "forcePullImage": true
